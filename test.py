@@ -1,7 +1,8 @@
 from locust import HttpUser, task
 
 class HelloWorldUser(HttpUser):
-    host = "http://127.0.0.1:8000"
+    host = "http://192.168.0.4:8001"
+
     @task
     def hello_world(self):
         self.client.get("/test")
